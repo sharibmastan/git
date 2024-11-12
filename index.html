@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello ....!!</p>
+   <div className="app">
+      <h1>Shopping Cart</h1>
+      <div className="products">
+        {products.map((product, index) => (
+          <Product key={index} product={product} addToCart={addToCart} />
+        ))}
+      </div>
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+    </div>
 </body>
 </html>
